@@ -14,11 +14,18 @@ $sql = $connection->query(" select * from acciones where idAccion=$id");
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Modificar Registro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            height: 100%;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
+<body class="d-flex flex-column bg-dark" style="min-height: 100vh;">
 
 <form class="col-4 p-3 m-auto" method="POST">
-    <h3 class="text-center text-secundary">Modificar Acciones</h3>
+    <h1 class="text-center text-secundary">Modificar Acciones</h1>
     <input type="hidden" name="id" value="<?=$_GET["id"]?>">
     <?php
     include "../controller/modify_action.php";
@@ -39,14 +46,24 @@ $sql = $connection->query(" select * from acciones where idAccion=$id");
             <label for="exampleInputEmail1" class="form-label">CANTIDADES DE ACCIONES</label>
             <input type="text" class="form-control" name="cantidadAccion" value="<?= $datos->CantidadAcciones?>">
         </div>
-        <!--<div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">COSTO TOTAL DE COMPRA</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>-->
     <?php }
     ?>
-    <button type="submit" class="btn btn-primary" name="btnRegistrar" value="ok">Modificar Accion</button>
-</form>
+    <div class="text-center">
+        <button type="submit" class="btn btn-info btn-primary mx-auto" name="btnRegistrar" value="ok">Modificar Accion</button>
+    </div>
 
+</form>
+<footer class="bg-secondary text-white py-4 mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <p>Averos David, Camapaña Gary, Torres David</p>
+                    <p>&copy; 2023 Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
