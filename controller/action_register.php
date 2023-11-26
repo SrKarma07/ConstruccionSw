@@ -1,5 +1,4 @@
 <?php
-
 if(!empty($_POST["btnRegistrar"])){
     if(!empty($_POST["nombreAccion"])and !empty($_POST["fechaAccion"])and !empty($_POST["precioAccion"])and !empty($_POST["cantidadAccion"])){
 
@@ -14,9 +13,7 @@ if(!empty($_POST["btnRegistrar"])){
         }else{
             echo  '<div class="alert alert-danger">Error al registrar accion</div>';
         }
-
     }else{
         echo '<div class="alert alert-warning">Alguno de los campos esta vacio</div>';
     }
-
 }

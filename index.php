@@ -10,7 +10,6 @@
     <title>Hoja de Calculo</title>
 
 </head>
-
 <body>
 <script>
     function eliminar(){

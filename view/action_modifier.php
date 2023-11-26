@@ -45,8 +45,6 @@ $sql = $connection->query(" select * from acciones where idAccion=$id");
         </div>-->
     <?php }
     ?>
-
-
     <button type="submit" class="btn btn-primary" name="btnRegistrar" value="ok">Modificar Accion</button>
 </form>
 
