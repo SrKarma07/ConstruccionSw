@@ -13,6 +13,7 @@
             margin: 0;
             height: 100%;
             color: #fff;
+            background-color: #FFFBFB;
         }
     </style>
 </head>
@@ -42,15 +43,15 @@ include "controller/action_delete.php";
 
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label text-dark">FECHA DE COMPRA</label>
+            <label for="exampleInputEmail2" class="form-label text-dark">FECHA DE COMPRA</label>
             <input type="date" class="form-control" name="fechaAccion">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label text-dark">PRECIO DE COMPRA POR ACCIÓN</label>
+            <label for="exampleInputEmail3" class="form-label text-dark">PRECIO DE COMPRA POR ACCIÓN</label>
             <input type="text" class="form-control" name="precioAccion" pattern="[0-9]*" title="Ingresa solo números">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label text-dark">CANTIDAD DE ACCIONES</label>
+            <label for="exampleInputEmail4" class="form-label text-dark">CANTIDAD DE ACCIONES</label>
             <input type="text" class="form-control" name="cantidadAccion" pattern="[0-9]*" title="Ingresa solo números">
         </div>
         <button type="submit" class="btn btn-primary mx-auto text-light btn-md" name="btnRegistrar" value="ok"><b>Registrar</b></button>
@@ -97,8 +98,8 @@ include "controller/action_delete.php";
         <div class="row">
             <div class="col-12">
                 <div class="text-center">
-                    <h5>Averos David, Campaña Gary, Torres David</53>
-                    <p>&copy; 2023 Todos los derechos reservados</p>
+                    <h5>Averos David - Campaña Gary - Torres David</53>
+                    <p>&copy; 2024 Todos los derechos reservados</p>
                 </div>
             </div>
         </div>

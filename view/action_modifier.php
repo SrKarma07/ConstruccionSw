@@ -19,11 +19,12 @@ $sql = $connection->query(" select * from acciones where idAccion=$id");
             margin: 0;
             height: 100%;
             color: #fff;
+            background-color: #FFFBFB;
         }
     </style>
 </head>
 <body class="d-flex flex-column" style="min-height: 100vh;">
-
+<img src="/ConstruccionSw/Img/Logo1.svg" alt="Logo" class="mx-auto mt-3" style="max-width: 150px; position:absolute; fill: blue;">
 <form class="col-4 p-3 m-auto text-center" method="POST">
     <h1 class="text-center text-secundary text-primary"><b>Modificar Acciones</b></h1>
     <input type="hidden" name="id" value="<?=$_GET["id"]?>">
@@ -49,7 +50,7 @@ $sql = $connection->query(" select * from acciones where idAccion=$id");
     <?php }
     ?>
     <div class="text-center">
-    <button type="submit" class="btn mx-auto text-light btn-lg bg-primary" name="btnRegistrar" value="ok" style="color: #0d6efd;">Aceptar</button>
+    <button type="submit" class="btn mx-auto text-light btn-lg bg-primary" name="btnRegistrar" value="ok" style="color: #0d6efd;">Modificar</button>
     </div>
 
 </form>
@@ -58,8 +59,8 @@ $sql = $connection->query(" select * from acciones where idAccion=$id");
         <div class="row">
             <div class="col-12">
                 <div class="text-center">
-                    <h5>Averos David, Camapaña Gary, Torres David</h5>
-                    <h5>&copy; 2023 Todos los derechos reservados</h5>
+                    <h5>Averos David - Campaña Gary - Torres David</53>
+                    <p>&copy; 2024 Todos los derechos reservados</p>
                 </div>
             </div>
         </div>
