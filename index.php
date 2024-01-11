@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/8aad18d137.js" crossorigin="anonymous"></script>
-    <title>Hoja de Calculo</title>
+    <title>Hoja de Cálculo</title>
     <style>
         body {
             margin: 0;
@@ -33,7 +33,7 @@ include "controller/action_delete.php";
     <form class="col-4 p-3 text-center mx-auto" method="POST" >
         <h1 class="text-center text-primary p-1"><b>Registro de Acciones</b></h1 >
         <?php
-        include "controller/action_register.php"
+        include "controller/action_register.php";
         ?>
 
         <div class="mb-3">
@@ -50,7 +50,7 @@ include "controller/action_delete.php";
             <input type="text" class="form-control" name="precioAccion" pattern="[0-9]*" title="Ingresa solo números">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label text-dark">CANTIDADES DE ACCIONES</label>
+            <label for="exampleInputEmail1" class="form-label text-dark">CANTIDAD DE ACCIONES</label>
             <input type="text" class="form-control" name="cantidadAccion" pattern="[0-9]*" title="Ingresa solo números">
         </div>
         <button type="submit" class="btn btn-primary mx-auto text-light btn-md" name="btnRegistrar" value="ok"><b>Registrar</b></button>
@@ -82,8 +82,8 @@ include "controller/action_delete.php";
                     <td><?= $datos-> CantidadAcciones?></td>
                     <td><?= $datos-> CostoTotalCompra?></td>
                     <td>
-                        <a href="view/action_modifier.php?id=<?= $datos->idAccion ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                        <a onclick="return eliminar()" href="index.php?id=<?= $datos->idAccion ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-delete-left"></i></a>
+                        <a href="view/action_modifier.php?id=<?= $datos->idAccion ?>" class="btn btn-small btn-warning"><i class="fas fa-pen-to-square"></i></a>
+                        <a onclick="return eliminar()" href="index.php?id=<?= $datos->idAccion ?>" class="btn btn-small btn-danger"><i class="fas fa-delete-left"></i></a>
                     </td>
                 </tr>
             <?php }
