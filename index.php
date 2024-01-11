@@ -16,45 +16,45 @@
         }
     </style>
 </head>
-<body class="d-flex flex-column bg-dark" style="min-height: 100vh;">
+<body class="d-flex flex-column " style="min-height: 100vh;">
 <script>
     function eliminar(){
         var respuesta=confirm("Estas seguro que deseas eliminar?")
         return respuesta
     }
 </script>
-<h1 class="text-center p-3">Hoja de Calculo</h1>
+<h1 class="text-center p-3 text-dark">Hoja de Calculo</h1>
 <?php
 include "model/connection.php";
 include "controller/action_delete.php";
 ?>
 
-<div class="container-fluid row">
-    <form class="col-4 p-3 text-center" method="POST" >
-        <h2 class="text-center text-secundary">Registro de Acciones</h2>
+<div class="container-fluid column">
+    <form class="col-4 p-3 text-center mx-auto" method="POST" >
+        <h2 class="text-center text-primary">Registro de Acciones</h2>
         <?php
         include "controller/action_register.php"
         ?>
 
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">NOMBRE DE LA ACCIÓN</label>
+            <label for="exampleInputEmail1" class="form-label text-dark">NOMBRE DE LA ACCIÓN</label>
             <input type="text" class="form-control" name="nombreAccion">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">FECHA DE COMPRA</label>
+            <label for="exampleInputEmail1" class="form-label text-dark">FECHA DE COMPRA</label>
             <input type="date" class="form-control" name="fechaAccion">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">PRECIO DE COMPRA POR ACCION</label>
+            <label for="exampleInputEmail1" class="form-label text-dark">PRECIO DE COMPRA POR ACCION</label>
             <input type="text" class="form-control" name="precioAccion">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">CANTIDADES DE ACCIONES</label>
+            <label for="exampleInputEmail1" class="form-label text-dark">CANTIDADES DE ACCIONES</label>
             <input type="text" class="form-control" name="cantidadAccion">
         </div>
         <button type="submit" class="btn btn-info btn-primary mx-auto" name="btnRegistrar" value="ok">Registrar</button>
     </form>
-    <div class="col-8 p-4">
+    <div class="col-10 p-3 mx-auto">
         <h2 class="text-center text-secundary">Tabla de Acciones</h2>
         <table class="table  table-dark table-hover table-striped-columns">
             <thead class="bg-primary">
