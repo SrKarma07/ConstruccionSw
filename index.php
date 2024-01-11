@@ -38,7 +38,7 @@ include "controller/action_delete.php";
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label text-dark">NOMBRE DE LA ACCIÓN</label>
-            <input type="text" class="form-control" name="nombreAccion" id="nombreAccion" maxlength="3">
+            <input type="text" class="form-control" name="nombreAccion" id="nombreAccion" maxlength="4">
 
         </div>
         <div class="mb-3">

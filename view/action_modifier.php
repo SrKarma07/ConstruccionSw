@@ -32,7 +32,7 @@ $sql = $connection->query(" select * from acciones where idAccion=$id");
     while($datos = $sql->fetch_object()) { ?>
         <div class="mb-3 text-dark">
             <label for="exampleInputEmail1" class="form-label">NOMBRE DE LA ACCIÓN</label>
-            <input type="text" class="form-control" name="nombreAccion" id="nombreAccion" value="<?= $datos->NombreAccion?>" maxlength="3">
+            <input type="text" class="form-control" name="nombreAccion" id="nombreAccion" value="<?= $datos->NombreAccion?>" maxlength="4">
         </div>
         <div class="mb-3 text-dark">
             <label for="exampleInputEmail1" class="form-label">FECHA DE COMPRA</label>
