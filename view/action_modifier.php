@@ -39,7 +39,7 @@ $sql = $connection->query(" select * from acciones where idAccion=$id");
             <input type="date" class="form-control" name="fechaAccion" value="<?= $datos->FechaCompra?>">
         </div>
         <div class="mb-3 text-dark">
-            <label for="exampleInputEmail1" class="form-label">PRECIO DE COMPRA POR ACCION</label>
+            <label for="exampleInputEmail1" class="form-label">PRECIO DE COMPRA POR ACCIÓN</label>
             <input type="text" class="form-control" name="precioAccion" pattern="[0-9]*" title="Ingresa solo números" value="<?= $datos->PrecioCompraAccion?>">
         </div>
         <div class="mb-3 text-dark">
@@ -49,17 +49,17 @@ $sql = $connection->query(" select * from acciones where idAccion=$id");
     <?php }
     ?>
     <div class="text-center">
-        <button type="submit" class="btn btn-info btn-primary mx-auto text-light btn-lg" name="btnRegistrar" value="ok">Modificar Accion</button>
+    <button type="submit" class="btn mx-auto text-light btn-lg bg-primary" name="btnRegistrar" value="ok" style="color: #0d6efd;">Aceptar</button>
     </div>
 
 </form>
-<footer class="bg-secondary text-white py-4 mt-auto">
+<footer class="bg-primary text-white py-4 mt-auto">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="text-center">
-                    <p>Averos David, Camapaña Gary, Torres David</p>
-                    <p>&copy; 2023 Todos los derechos reservados</p>
+                    <h5>Averos David, Camapaña Gary, Torres David</h5>
+                    <h5>&copy; 2023 Todos los derechos reservados</h5>
                 </div>
             </div>
         </div>
