@@ -17,6 +17,7 @@
     </style>
 </head>
 <body class="d-flex flex-column " style="min-height: 100vh;">
+<img src="img/Logo1.svg" alt="Logo" class="mx-auto mt-3" style="max-width: 150px; position:absolute; fill: blue;">
 <script>
     function eliminar(){
         var respuesta=confirm("Estas seguro que deseas eliminar?")
@@ -30,7 +31,7 @@ include "controller/action_delete.php";
 
 <div class="container-fluid column">
     <form class="col-4 p-3 text-center mx-auto" method="POST" >
-        <h2 class="text-center text-primary p-1"><b>Registro de Acciones</b></h2>
+        <h1 class="text-center text-primary p-1"><b>Registro de Acciones</b></h1 >
         <?php
         include "controller/action_register.php"
         ?>
@@ -91,12 +92,12 @@ include "controller/action_delete.php";
         </table>
     </div>
 </div>
-<footer class="bg-secondary text-white py-4 mt-auto">
+<footer class="bg-primary text-white py-4 mt-auto" >
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="text-center">
-                    <p>Averos David, Camapaña Gary, Torres David</p>
+                    <h5>Averos David, Campaña Gary, Torres David</53>
                     <p>&copy; 2023 Todos los derechos reservados</p>
                 </div>
             </div>
