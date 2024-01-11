@@ -23,7 +23,6 @@
         return respuesta
     }
 </script>
-<h1 class="text-center p-3 text-dark">Hoja de Calculo</h1>
 <?php
 include "model/connection.php";
 include "controller/action_delete.php";
@@ -31,14 +30,15 @@ include "controller/action_delete.php";
 
 <div class="container-fluid column">
     <form class="col-4 p-3 text-center mx-auto" method="POST" >
-        <h2 class="text-center text-primary">Registro de Acciones</h2>
+        <h2 class="text-center text-primary p-1"><b>Registro de Acciones</b></h2>
         <?php
         include "controller/action_register.php"
         ?>
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label text-dark">NOMBRE DE LA ACCIÓN</label>
-            <input type="text" class="form-control" name="nombreAccion">
+            <input type="text" class="form-control" name="nombreAccion" id="nombreAccion" maxlength="3">
+
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label text-dark">FECHA DE COMPRA</label>
@@ -46,24 +46,24 @@ include "controller/action_delete.php";
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label text-dark">PRECIO DE COMPRA POR ACCION</label>
-            <input type="text" class="form-control" name="precioAccion">
+            <input type="text" class="form-control" name="precioAccion" pattern="[0-9]*" title="Ingresa solo números">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label text-dark">CANTIDADES DE ACCIONES</label>
-            <input type="text" class="form-control" name="cantidadAccion">
+            <input type="text" class="form-control" name="cantidadAccion" pattern="[0-9]*" title="Ingresa solo números">
         </div>
-        <button type="submit" class="btn btn-info btn-primary mx-auto" name="btnRegistrar" value="ok">Registrar</button>
+        <button type="submit" class="btn btn-primary mx-auto text-light" name="btnRegistrar" value="ok"><b>Registrar</b></button>
     </form>
-    <div class="col-10 p-3 mx-auto">
-        <h2 class="text-center text-secundary">Tabla de Acciones</h2>
-        <table class="table  table-dark table-hover table-striped-columns">
-            <thead class="bg-primary">
+    <div class="col-8 p-3 mx-auto d-flex flex-column align-items-center">
+    <h2 class="text-center text-dark">Tabla de Acciones</h2>
+    <table class="table table-light table-hover table-striped-columns text-center ">
+        <thead class="bg-primary">
             <tr>
                 <th scope="col">id Acción</th>
                 <th scope="col">Nombre de la Acción</th>
                 <th scope="col">Fecha de la Compra</th>
                 <th scope="col">Precio de Compra por Acción</th>
-                <th scope="col">Cantidades de Acciones</th>
+                <th scope="col">Cantidad de Acciones</th>
                 <th scope="col">Costo total de Compra</th>
                 <th scope="col"></th>
             </tr>
@@ -73,7 +73,7 @@ include "controller/action_delete.php";
             include "model/connection.php";
             $sql=$connection->query(" select * from acciones ");
             while($datos=$sql->fetch_object()){?>
-                <tr>
+                <tr class="align-items-center">
                     <th scope="row"><?=$datos -> idAccion ?></th>
                     <td><?= $datos-> NombreAccion?></td>
                     <td><?= $datos-> FechaCompra?></td>
@@ -107,3 +107,16 @@ include "controller/action_delete.php";
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var inputNombreAccion = document.getElementById("nombreAccion");
+
+    inputNombreAccion.addEventListener("input", function() {
+        // Remover caracteres no permitidos (letras minúsculas y otros caracteres)
+        var inputValue = this.value.replace(/[^A-Z]/g, '');
+        
+        // Convertir el valor a mayúsculas
+        this.value = inputValue.toUpperCase();
+    });
+});
+</script>
