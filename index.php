@@ -38,7 +38,7 @@ include "controller/action_delete.php";
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label text-dark">NOMBRE DE LA ACCIÓN</label>
-            <input type="text" class="form-control" name="nombreAccion" id="nombreAccion" maxlength="3">
+            <input type="text" class="form-control" name="nombreAccion" id="nombreAccion" maxlength="4">
 
         </div>
         <div class="mb-3">
@@ -46,7 +46,7 @@ include "controller/action_delete.php";
             <input type="date" class="form-control" name="fechaAccion">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label text-dark">PRECIO DE COMPRA POR ACCION</label>
+            <label for="exampleInputEmail1" class="form-label text-dark">PRECIO DE COMPRA POR ACCIÓN</label>
             <input type="text" class="form-control" name="precioAccion" pattern="[0-9]*" title="Ingresa solo números">
         </div>
         <div class="mb-3">
