@@ -32,7 +32,7 @@ $sql = $connection->query(" select * from acciones where idAccion=$id");
     while($datos = $sql->fetch_object()) { ?>
         <div class="mb-3 text-dark">
             <label for="exampleInputEmail1" class="form-label">NOMBRE DE LA ACCIÓN</label>
-            <input type="text" class="form-control" name="nombreAccion" value="<?= $datos->NombreAccion?>">
+            <input type="text" class="form-control" name="nombreAccion" id="nombreAccion" value="<?= $datos->NombreAccion?>" maxlength="3">
         </div>
         <div class="mb-3 text-dark">
             <label for="exampleInputEmail1" class="form-label">FECHA DE COMPRA</label>
@@ -40,11 +40,11 @@ $sql = $connection->query(" select * from acciones where idAccion=$id");
         </div>
         <div class="mb-3 text-dark">
             <label for="exampleInputEmail1" class="form-label">PRECIO DE COMPRA POR ACCION</label>
-            <input type="text" class="form-control" name="precioAccion" value="<?= $datos->PrecioCompraAccion?>">
+            <input type="text" class="form-control" name="precioAccion" pattern="[0-9]*" title="Ingresa solo números" value="<?= $datos->PrecioCompraAccion?>">
         </div>
         <div class="mb-3 text-dark">
             <label for="exampleInputEmail1" class="form-label">CANTIDADES DE ACCIONES</label>
-            <input type="text" class="form-control" name="cantidadAccion" value="<?= $datos->CantidadAcciones?>">
+            <input type="text" class="form-control" name="cantidadAccion" pattern="[0-9]*" title="Ingresa solo números" value="<?= $datos->CantidadAcciones?>">
         </div>
     <?php }
     ?>
@@ -67,3 +67,16 @@ $sql = $connection->query(" select * from acciones where idAccion=$id");
 </footer>
 </body>
 </html>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var inputNombreAccion = document.getElementById("nombreAccion");
+
+    inputNombreAccion.addEventListener("input", function() {
+        // Remover caracteres no permitidos (letras minúsculas y otros caracteres)
+        var inputValue = this.value.replace(/[^A-Z]/g, '');
+        
+        // Convertir el valor a mayúsculas
+        this.value = inputValue.toUpperCase();
+    });
+});
+</script>
