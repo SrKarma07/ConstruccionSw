@@ -22,34 +22,34 @@ $sql = $connection->query(" select * from acciones where idAccion=$id");
         }
     </style>
 </head>
-<body class="d-flex flex-column bg-dark" style="min-height: 100vh;">
+<body class="d-flex flex-column" style="min-height: 100vh;">
 
-<form class="col-4 p-3 m-auto" method="POST">
-    <h1 class="text-center text-secundary">Modificar Acciones</h1>
+<form class="col-4 p-3 m-auto text-center" method="POST">
+    <h1 class="text-center text-secundary text-primary"><b>Modificar Acciones</b></h1>
     <input type="hidden" name="id" value="<?=$_GET["id"]?>">
     <?php
     include "../controller/modify_action.php";
     while($datos = $sql->fetch_object()) { ?>
-        <div class="mb-3">
+        <div class="mb-3 text-dark">
             <label for="exampleInputEmail1" class="form-label">NOMBRE DE LA ACCIÓN</label>
             <input type="text" class="form-control" name="nombreAccion" value="<?= $datos->NombreAccion?>">
         </div>
-        <div class="mb-3">
+        <div class="mb-3 text-dark">
             <label for="exampleInputEmail1" class="form-label">FECHA DE COMPRA</label>
             <input type="date" class="form-control" name="fechaAccion" value="<?= $datos->FechaCompra?>">
         </div>
-        <div class="mb-3">
+        <div class="mb-3 text-dark">
             <label for="exampleInputEmail1" class="form-label">PRECIO DE COMPRA POR ACCION</label>
             <input type="text" class="form-control" name="precioAccion" value="<?= $datos->PrecioCompraAccion?>">
         </div>
-        <div class="mb-3">
+        <div class="mb-3 text-dark">
             <label for="exampleInputEmail1" class="form-label">CANTIDADES DE ACCIONES</label>
             <input type="text" class="form-control" name="cantidadAccion" value="<?= $datos->CantidadAcciones?>">
         </div>
     <?php }
     ?>
     <div class="text-center">
-        <button type="submit" class="btn btn-info btn-primary mx-auto" name="btnRegistrar" value="ok">Modificar Accion</button>
+        <button type="submit" class="btn btn-info btn-primary mx-auto text-light btn-lg" name="btnRegistrar" value="ok">Modificar Accion</button>
     </div>
 
 </form>

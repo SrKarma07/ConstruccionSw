@@ -52,7 +52,7 @@ include "controller/action_delete.php";
             <label for="exampleInputEmail1" class="form-label text-dark">CANTIDADES DE ACCIONES</label>
             <input type="text" class="form-control" name="cantidadAccion" pattern="[0-9]*" title="Ingresa solo números">
         </div>
-        <button type="submit" class="btn btn-primary mx-auto text-light" name="btnRegistrar" value="ok"><b>Registrar</b></button>
+        <button type="submit" class="btn btn-primary mx-auto text-light btn-md" name="btnRegistrar" value="ok"><b>Registrar</b></button>
     </form>
     <div class="col-8 p-3 mx-auto d-flex flex-column align-items-center">
     <h2 class="text-center text-dark">Tabla de Acciones</h2>
